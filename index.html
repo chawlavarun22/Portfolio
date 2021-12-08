@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <title>My Portfolio</title>
+    <style>
+    body {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 15px !important;
+    line-height: 20px !important;
+    color: #333 !important;
+    font-weight: 500 !important;
+ }
+
+ h2 {
+     font-size: 20px !important;
+     font-weight: 700 !important;
+     line-height: 40px !important;
+ }
+
+ h3 {
+     font-size: 17px !important;
+     font-weight: 600 !important;
+     line-height: 30px !important;
+ }
+
+ h4 {
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    line-height: 25px !important;
+ }
+
+ h5 {
+     font-size: 14px !important;
+     font-weight: 600 !important;
+ }
+
+
+
+.columns-block {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.left-col-block {
+    width: 50%;
+    position: fixed;
+    overflow: hidden;
+    text-align: center;
+    left: 0;
+}
+
+.header {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    vertical-align: middle;
+    position: relative;
+}
+
+.header .content {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10%;
+}
+
+.header .content h1 {
+    font-size: 35px;
+    color: #fff;
+    line-height: 1;
+    margin: 0;
+}
+
+.header .content p {
+    color: #fff;
+    font-size: 20px;
+}
+
+.header .content .social-icon {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.header .content .social-icon li {
+    display: inline-block;
+    margin: 0 2px;
+}
+
+.header .content .social-icon li a {
+    display: block;
+    color: #fff;
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 35px;
+    border: 2px solid #555;
+}
+
+.header .content .social-icon li a:hover {
+    border-color: #fff;
+}
+
+.right-col-block {
+    width: 50%;
+    position: absolute;
+    right: 0;
+}
+
+.section-wrapper {
+    padding: 50px;
+}
+
+.section-title {
+    margin-bottom: 15px;
+}
+
+.section-title h2 {
+    color: #444;
+}
+
+.expertise-item {
+    margin-bottom: 30px;
+}
+
+.expertise-item h3 {
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.content-item {
+    margin-bottom: 40px;
+}
+
+.content-item h3 {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0 0 10px;
+}
+
+.content-item small {
+    color: #888;
+}
+
+.education-content {
+    margin-bottom: 40px;
+}
+
+.education-content h3 {
+    margin: 0 0 10px;
+    font-weight: bold;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.education-content h4 {
+   margin: 0;
+   line-height: 1; 
+}
+
+.education-content small {
+    color: #888;
+}
+
+.control-margin {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.form-control {
+    height: 50px;
+    padding: 0 20px !important;
+    font-size: 15px !important;
+    border: 2px solid #ccc !important;
+    border-radius: 0 !important;
+}
+
+.btn {
+    padding: 15px !important;
+    font-size: 15px !important;
+    font-weight: bold !important;
+    border-radius: 0 !important;
+    text-transform: uppercase !important;
+    color: #fff !important;
+}
+
+.btn-primary {
+    background-color: #1C1EE6 !important;
+}
+
+.footer {
+    padding: 30px 50px;
+}
+
+.footer .footer-section 
+{
+    font-size: 13px;
+    color: #888;
+}
+
+.footer .footer-section .copyright-text {
+    font-weight: 400;
+    display: block;
+}
+
+.background-grey {
+    background: #F9F9F9;
+}
+
+.header .profile-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://scontent.fixc2-1.fna.fbcdn.net/v/t39.30808-6/p526x296/265238234_3265155947052608_4803219026605121723_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=730e14&_nc_ohc=rcsO2duj-j8AX8eeS7d&_nc_ht=scontent.fixc2-1.fna&oh=594dccee43b7bafcb05937506bb6d12a&oe=61B4B1B6);
+    background-size: cover;
+    z-index: -1;
+    
+}
+
+.header .profile-image:before{
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(160deg, transparent 40%, #bb5a7a)
+}
+
+.carousel-paragraph {
+    font-size: 10px !important;
+}
+
+@media (max-width: 600px) {
+    .left-col-block {
+        width: 100%;
+        position: relative;
+    }
+    .right-col-block {
+        width: 100%;
+        position: relative;
+    }
+}
+      
+      
+    </style>
+</head>
+<body>
+    <div id="main-wrapper">
+      <div class="columns-block">
+        <div class="left-col-block">
+          <header class="header">
+              <div class="content">
+                <h1>Hi, I'm Varun Chawla</h1>
+                <p class="lead">Full Stack Developer</p>
+                <ul class="social-icon">
+                  <li><a href="https://www.facebook.com/varun.chawla.96930"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="https://twitter.com/VarunCh91469071?t=APVyW_dmTk1S8Lg2Pptcog&s=08"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="https://www.linkedin.com/in/varun-chawla-a13a9b192"><i class="fab fa-linkedin"></i></a></li>
+                  <li><a href="https://www.instagram.com/invites/contact/?i=upcbbigsrem1&utm"><i class="fab fa-instagram"></i></a></li>
+                  <li><a href="https://github.com/chawlavarun22"><i class="fab fa-github"></i></a></li>
+                </ul>
+              </div>
+              <div class="profile-image"></div>
+              
+              
+              
+              
+          </header>
+        </div>
+        <div class="right-col-block">
+          <section class="section-wrapper">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="section-title">
+                    <h2>What I am All About</h2>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <p><i>MERN STACK DEVELOPER</i><br>I am Full Stack Developer specialist in Front End
+                    Development. I built various Projects. I can design and optimize a
+                    database,write a backend deploy it to a web server. I'm little bit proficient in
+                    React </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section-wrapper background-grey">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="section-title">
+                    <h2>Expertise</h2>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="expertise-item">
+                    <h3>
+                      Full Stack Development
+                    </h3>
+                    <p>Full Stack Developer is an engineer who works on both client-side and
+                      server-side of the software application. This type of developer works on the
+                      Full Stack of a software application meaning Front end development, Back end
+                      development, Database, Server, API, and version controlling systems.</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="expertise-item">
+                    <h3>
+                      Front End Developer
+                    </h3>
+                    <p>Front end development, otherwise referred to as client-side development, uses
+                      JavaScript, HTML, and CSS languages to build web applications that users can
+                      use and interact with. This domain revolves around the look of a website and
+                      how the design is implemented.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="expertise-item">
+                    <h3>Database</h3>
+                    <p>A database is an organized collection of structured information, or data,
+                        typically stored electronically in a computer system. A database is
+                        usually controlled by a database management system (DBMS). Together, the
+                        data and the DBMS, along with the applications that are associated with
+                        them, are referred to as a database system, often shortened to just
+                        database</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="expertise-item">
+                    <h4>Back End Developer</h4>
+                    <p>A backend developer is one who makes use of the technology required to
+                        develop the products for the backend of any website. A backend developer
+                        is responsible for building the structure of a software application.The
+                        attractive visuals created by designers, UX professionals couldn't exist
+                        without the technology provided by a back end developer. </p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          <section class="section-wrapper">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="section-title">
+                    <h2>Skillset</h2>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12">
+                  <label>HTML, CSS & BOOTSTRAP</label>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 90%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">90%</div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <label>MY SQL</label>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 85%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">85%</div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <label>Javascript & React</label>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 80%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">80%</div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <label>Node JS</label>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-striped bg-dark" role="progressbar" style="width: 75%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">75%</div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <label>MongoDB</label>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 85%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">85%</div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <label>GitHub</label>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-striped bg-dark" role="progressbar" style="width: 80%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">80%</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section-wrapper background-grey">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="section-title">
+                    <h2>Job & Project Expertise</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                          Spotify
+                        </button>
+                      </h2>
+                      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                          <p>Spotify is a Swedish advertisement streaming and media services provider founded on 23 April 2006 by Daniel Ek and Martin Lorentzon. It is the world's largest music streaming service provider, with over 381 million monthly active users, including 172 million paying subscribers, as of September 2021</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                          NewsMonkey 
+                        </button>
+                      </h2>
+                      <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                          <p>A news application is a big interactive database that tells a news story.NewsMonkey is used to read daily live updated news across the country . It consist of Bollywood , Science , Food news etc . </p>
+                         </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="flush-headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                          JOB-PORTAL FORM
+                        </button>
+                      </h2>
+                      <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                          <p>job portal contains direct solicitations for
+                          employment. Websites that offer tips for finding a job or highlight career
+                          options, but don't list specific, current job openings, aren't job portals.
+                          Most job portals allow you to apply for jobs online immediately, or they
+                          provide links to do so.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="flush-headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseThree">
+                          CALCULATOR
+                        </button>
+                      </h2>
+                      <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                          <p>A machine that provides arithmetic capabilities. The most basic calculators add, subtract, multiply and divid. Whether mechanical or electronic, all calculators accept numeric input from dials, levers or a keypad.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="flush-headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                          QUALITY ASSURANCE ENGINEER (2020-2021)
+                        </button>
+                      </h2>
+                      <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                          <p>Quality assurance (QA) is a way of preventing mistakes and defects in manufactured products and avoiding problems when delivering products or services to customers; which ISO 9000 defines as "part of quality management focused on providing confidence that quality requirements will be fulfilled".</p>
+                </div>
+                </div>
+              </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section-wrapper">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="section-title">
+                    <h2>Education</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="education-content">
+                    <small>2016 - 2020</small>
+                    <h3><b>B.Tech (Mechanical Engineering)</b></h3>
+                    <h4>Chandigarh Group Of Colleges</h4>
+                    <p>Percentage = 72%</p> 
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="education-content">
+                    <small>Full Stack Development</small>
+                    <h3>Tap Academy Pvt Ltd</h3>
+                    <p>MERN STACK , MYSQL</p>
+                    <p>HTML , CSS , JS</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="education-content">
+                    <small>2015 - 2016</small>
+                    <h3>XII (NON-MEDICAL)</h3>
+                    <h4>Play Ways Sen Sec School</h4>
+                    <p>Percentage = 74%</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="education-content">
+                    <small>2013 - 2014</small>
+                    <h3>XTH</h3>
+                    <h4>National High School</h4>
+                    <p>Percentage = 84%</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section-wrapper background-grey">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="section-title">
+                    <h2>Projects</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active" data-bs-interval="2000">
+                        <img src="https://cdn.pixabay.com/photo/2016/11/03/20/03/music-on-your-smartphone-1796117__340.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>SPOTIFY</h5>
+                          <p class="carousel-paragraph">Spotify is all the music you'll ever need</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item" data-bs-interval="2000">
+                        <img src="https://images.pexels.com/photos/4185957/pexels-photo-4185957.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block" style="color: black;";>
+                          <h5>NewsMonkey</h5>
+                          <p class="carousel-paragraph">NewsMonkey is used to read daily live updated news . </p>
+                        </div>
+                      </div>
+                      <div class="carousel-item" data-bs-interval="2000">
+                        <img src="https://images.pexels.com/photos/6927360/pexels-photo-6927360.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>CALCULATOR</h5>
+                          <p class="carousel-paragraph">calculator is used to calculate value in a very short time.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section-wrapper">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="section-title">
+                    <h2>Address</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <address>
+                    <strong>Address</strong><br/>
+                    <p>95/4B Jagdish Enclave,Patiala 147001</p>
+                  </address>
+                  <address>
+                    <strong>
+                      Mobile
+                    </strong><br/>
+                    <p>+91 7888932899</p>
+                  </address>
+                  <address>
+                    <strong>Email</strong><br/>
+                    <p>vchawla2107@gmail.com</p>
+                  </address>
+                </div>
+                <div class="col-md-8">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d5764.421468660277!2d76.3915988!3d30.3646999!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sin!4v1638947030619!5m2!1sen!2sin" width="410" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section-wrapper background-grey">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="section-title">
+                    <h2>Get In Touch</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="feedback-form">
+                    <form  id="contactForm">
+                      <div class="control-margin form-group">
+                        <label for="fullName" class="form-label">Name</label>
+                        <input type="text" name="fullName" placeholder="Full Name" class="form-control" id="fullName" required>
+                      </div>
+                      <div class="control-margin form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" name="email" placeholder="test@tmail.com" class="form-control" id="email" required>
+                      </div>
+                      <div class="control-margin form-group">
+                        <label for="subject" class="form-label">Subject</label>
+                        <input type="text" name="subject" placeholder="Subject" class="form-control" id="subject" required>
+                      </div>
+                      <div>
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control control-margin" placeholder="Leave a Message here" id="message" style="height: 200px"></textarea>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <footer class="footer">
+            <div class="footer-section">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="copyright-text">&copy; All Rights Reserved </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>  
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" integrity="sha512-fzff82+8pzHnwA1mQ0dzz9/E0B+ZRizq08yZfya66INZBz86qKTCt9MLU0NCNIgaMJCgeyhujhasnFUsYMsi0Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
